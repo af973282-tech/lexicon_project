@@ -1,4 +1,8 @@
 -- Pattern_Category migration for the Constructions table
+-- NOTE: as of the canonical schema.sql, Pattern_Category is already a column
+-- on Constructions from CREATE TABLE. This file is kept as historical record
+-- of the migration; when building fresh from schema.sql, apply only the
+-- UPDATE statements below (skip any ALTER TABLE line).
 -- Run AFTER all 9 words (logos through theos) are already loaded.
 -- Adds a queryable taxonomy tag to every existing Construction row,
 -- built from a verified audit of all 52 rows (see Cross_Lemma_Matrix.md).
